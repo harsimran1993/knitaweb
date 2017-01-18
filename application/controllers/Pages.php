@@ -8,28 +8,9 @@ class Pages extends CI_Controller{
 		$this->load->helper('url_helper');
 	}
 	
-	public function index(){
-		
-        $data['title'] = ucfirst("home"); // Capitalize the first letter
-		$this->load->view('templates/header', $data);
-        $this->load->view('pages/index');
-        $this->load->view('templates/footer');
-	}
-	
-	function load($method)
-    {
-        is_file(APPPATH.'views/pages/'.$method.'.php') OR show_404();
-        $this->load->view("pages/$method");
-    }
-	
-	public function view($page ='index')
+	public function index()
 	{
-        if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
-        {
-                // Whoops, we don't have a page for that!
-                show_404();
-        }
-        $data['title'] = ucfirst($page); // Capitalize the first letter
+        $data['title'] = "Harsimran Singh"; // Capitalize the first letter
         $data['vidurl'] ="https://youtu.be/6mShYQ4H4Pw";
         $this->load->view('templates/header', $data);
         $this->loading("0%");
