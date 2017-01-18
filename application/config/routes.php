@@ -37,9 +37,6 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-$route['pages/(:any)'] = 'pages/load/$1';
-$route['pages'] = 'pages/index';
-$route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages/view';
 $route['404_override'] = '';
 
