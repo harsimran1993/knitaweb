@@ -14,12 +14,13 @@ class Pages extends CI_Controller{
         $data['vidurl'] ="https://youtu.be/6mShYQ4H4Pw";
         $this->load->view('templates/header', $data);
         $this->loading("0%");
-        $this->load->view('templates/video', $data);
-		$this->loading("40%");
+       // $this->load->view('templates/video', $data);
+		//$this->loading("40%");
         $this->load->view('templates/navbar', $data);
         $this->about();
         $this->load->view('templates/parralax');
 		$this->loading("70%");
+		$this->load->view('pages/gallery');
         //$this->contenta();
         $this->loading("100%");
         $this->load->view('templates/footer', $data);
