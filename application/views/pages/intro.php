@@ -1,21 +1,19 @@
-<a id="about"></a>
-<div class="intro-header">
+<section id="about" class="intro-header">
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-21">
                     <div class="intro-message">
-                        <h1><?php echo $about_title; ?></h1>
-                        <h3><?php echo $about_head; ?></h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                            </li>
-                        </ul>
+                        <h1>
+                        <span><?php echo $about_title; ?></span>
+                        	<span class="cd-headline rotate-1">
+								<span class="cd-words-wrapper" style="width:100%;">
+									<b class="is-visible" style="width:100%;"><?php echo $about_head1; ?></b>
+									<b style="width:100%;"><?php echo $about_head2; ?></b>
+									<b style="width:100%;"><?php echo $about_head3; ?></b>
+								</span>
+                        	</span>
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -23,4 +21,4 @@
         </div>
         <!-- /.container -->
 
-    </div>
+    </section>

@@ -15,20 +15,22 @@ class Pages extends CI_Controller{
         $this->load->view('templates/header', $data);
         $this->loading("0%");
        // $this->load->view('templates/video', $data);
-		//$this->loading("40%");
         $this->load->view('templates/navbar', $data);
         $this->about();
-        $this->load->view('templates/parralax');
-		$this->loading("70%");
+		$this->loading("40%");
 		$this->load->view('pages/gallery');
+		$this->loading("70%");
+        $this->load->view('templates/parralax');
         //$this->contenta();
         $this->loading("100%");
         $this->load->view('templates/footer', $data);
 	}
 	public function about()
 	{
-        $data['about_title']= "KNIT-a-WEB";
-        $data['about_head'] = "Realize your Dream Websites and Applications";
+        $data['about_title']= "Hi, I'm Harsimran Singh.I Build";
+        $data['about_head1'] = "Landing-Pages.";
+        $data['about_head2'] = "Applications.";
+        $data['about_head3'] = "Dynamic Websites.";
         $this->load->view('pages/intro', $data);
 	}
 	

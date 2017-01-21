@@ -1,7 +1,7 @@
 
 
 <a id="services"></a>
-<div class="parallax">
+<section class="parallax">
 	<div class="container">
       <div class="row" style="height:6em">
       </div>
@@ -30,4 +30,4 @@
       <div class="row" style="height:5em">
       </div>
 	</div>
-</div>
+</section>

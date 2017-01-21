@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse" role="navigation">
+<nav id="nav_bar" class="navbar navbar-inverse" role="navigation">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                        <a href="#about" data-toggle="popover" data-placement="bottom" data-content="Content" >About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li>
                         <a href="#services">Services</a>
