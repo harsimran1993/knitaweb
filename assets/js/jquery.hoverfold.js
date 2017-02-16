@@ -4,7 +4,7 @@
 
 		this.each( function() {
 		
-			$( this ).children( '.view' ).each( function() {
+			$( this ).children( '.view-wrap' ).children('.view').each( function() {
 			
 				var $item 	= $( this ),
 					img		= $item.children( 'img' ).attr( 'src' ),
@@ -21,7 +21,7 @@
 					
 				var $struct = $( struct );
 				
-				$item.find( 'img' ).remove().end().append( $struct ).find( 'div.slice' ).css( 'background-image', 'url(' + img + ')' ).prepend( $( '<span class="overlay" ></span>' ) );
+				$item.find( '.remove' ).remove().end().append( $struct ).find( 'div.slice' ).css( 'background-image', 'url(' + img + ')' ).prepend( $( '<span class="overlay" ></span>' ) );
 				
 			} );
 			
@@ -30,3 +30,18 @@
 	};
 
 } )( jQuery );
+
+function stylesheet(url) {
+    var s = document.createElement('link');
+    s.type = 'text/css';
+    s.async = true;
+    s.src = url;
+    var x = document.getElementsByTagName('head')[0];
+    x.appendChild(s);
+}
+
+if (Modernizr.csstransforms3d && Modernizr.csstransitions) {
+	$('#gallery').hoverfold();
+} else {
+	stylesheet('css/fallbackactv.css');
+}

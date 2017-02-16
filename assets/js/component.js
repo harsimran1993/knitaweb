@@ -1,6 +1,6 @@
 	//before ready
 	function loading(percent){
-	$('.progress-bar').animate({width:percent},1000,function(){
+	$('.progress-bar').animate({width:percent},200,function(){
 	$(this).children().html(percent);
 	if(percent=='100%'){
 	setTimeout(function(){
@@ -12,19 +12,13 @@
 	};
 	//after ready
 	jQuery(document).ready(function($){
+
 		//navbar
-		  $(window).scroll(function () {
-		      //if you hard code, then use console
-		      //.log to determine when you want the 
-		      //nav bar to stick.  
-		      console.log($(window).scrollTop())
-		    if ($(window).scrollTop() > $(window).height()) {
-		      $('#nav_bar').addClass('navbar-fixed-top');
-		    }
-		    if ($(window).scrollTop() < $(window).height()) {
-		      $('#nav_bar').removeClass('navbar-fixed-top');
-		    }
-		  });
+		$(".nav a").on("click", function(){
+			$(".nav").find(".active").removeClass("active");
+			$(this).parent().addClass("active");
+		    $(".navbar-collapse").collapse('hide');
+		});	
 		//set animation timing
 		var animationDelay = 2500,
 			//loading bar effect

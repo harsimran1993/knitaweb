@@ -1,4 +1,4 @@
-<nav id="nav_bar" class="navbar navbar-inverse topnav" role="navigation">
+<nav id="nav_bar" class="navbar navbar-inverse topnav">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -8,19 +8,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand scrollTo" href="#about">Start Bootstrap</a>
+                <a style="overflow:hidden; color:white;" class="navbar-brand scrollTo" href="#about">Harsimran Singh<br/><p style="font-size:9px; text-align:right;">Computer Scientist (B.tech)</p></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                        <a href="#about">About</a>
+                        <a href="<?php echo base_url("#about"); ?>">Home</a>
+                    </li> 
+                    <li>
+                        <a id="about" href="<?php echo base_url("about"); ?>">About</a>
                     </li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="<?php echo base_url("#gallery"); ?>">Potfolio</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="<?php echo base_url("#services"); ?>">Services</a>
+                    </li>
+                    <li>
+                        <a id="contact"  href="<?php echo base_url("contact"); ?>">Contact</a>
                     </li>
                 </ul>
             </div>

@@ -7,17 +7,24 @@
 body,html {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color:black;
 }
 body,h1,h2,h3{
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
-
-.topnav {
-    font-size: 14px; 
-	margin-bottom:0px;
+body{
+    margin-top:0; 
 }
+.navbar{
+    font-size: 14px; 
+    text-align:center;
+	margin-bottom:5px;
+	width:100%;
+	top:0;
+	z-index:99999;
+}
+
 
 .lead {
     font-size: 18px;
@@ -25,18 +32,19 @@ body,h1,h2,h3{
 }
 
 .intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
+	min-width:100%;
+	min-height:100%;
     text-align: center;
     color: #f8f8f8;
-    background: url(../image/intri-bg2.jpg) no-repeat center center;
+    background: url(../image/notebook2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .intro-message {
-    position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+	position:relative;
+    padding-top: 30vh;
 }
 
 .intro-message > h1 {
@@ -48,127 +56,90 @@ body,h1,h2,h3{
 
 .intro-divider {
     width: auto;
+    margin-left:20vw;
+    margin-right:20vw;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
-
-.intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-}
-
-@media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
-
-    .intro-message > h1 {
-        font-size: 1.3em;
-        width:100%;
-    }
-
-    ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-
-    .intro-divider {
-        width: 100%;
-    }
-}
-
-.network-name {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
-.content-section-a {
-    padding: 50px 0;
-    background-color: #f8f8f8;
-}
-
-.content-section-b {
-    padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
-}
-
-.section-heading {
-    margin-bottom: 30px;
-}
-
-.section-heading-spacer {
-    float: left;
-    width: 200px;
-    border-top: 3px solid #e7e7e7;
-}
-
-.banner {
-    padding: 100px 0;
+.about-header{
+	min-width:100%;
+    text-align: center;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
-    background-size: cover;
+    background-color:#2098d1;
+    padding-top:30px;
+    padding-bottom:10px;
 }
-
-.banner h2 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 3em;
+.about-header > h1{    
+	font-size: 2.6em;    
+	line-height: 1.4;
 }
-
-.banner ul {
-    margin-bottom: 0;
+.about-header > h2{    
+	font-size: 1.5em;    
+	line-height: 1.4;
 }
-
-.banner-social-buttons {
-    float: right;
-    margin-top: 0;
+.about-content{ 
+	font-size: 1.2em;  
+    background-color:white;
+	width: 100%;
+	padding-top: 4em;
+	padding-left: 25%;
+	padding-right: 25%;
+	padding-bottom: 8em; 
 }
-
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        float: left;
-        margin-top: 15px;
-    }
+.about-content > p{
+	line-height: 1.6;
 }
-
-@media(max-width:767px) {
-    .banner h2 {
-        margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 3em;
-    }
-
-    ul.banner-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
+.about-content > form > p{
+	font-size: 0.8em;
+    font-weight: 300;
 }
-
-footer {
-    background-color: darkgrey;
+.about-content > form > p > input{
+	width:100%;
+    padding:1%;
+}
+.about-content > form > h2{
+	font-size: 1em;
+    font-weight: 700;
+    line-height: 1.2;
+	color: black;
+    margin-top:0;
+    margin-bottom: 1.2em;
+	padding-bottom: .3em;
+	border-bottom: solid 2px #f9f9f9;
+}
+.about-content > form > input{
+	background-color:#2098d1;
+	color:white;
+	line-height:2;
+	padding:1%;
+	padding-left:2%;
+	padding-right:2%;
+	border:0;
+}
+.required{
+	color:red;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: grey;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: grey;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: grey;
+}
+#footer {
+    background-color: black;
     vertical-align: middle;
+    text-align:center;
+    color:white;
 }
 
 p.copyright {
     margin: 15px 0 0;
-}
-
-#overlay{
-  z-index:10;
-  background:rgba(0,0,0,0.9);
-  transition: 1s 0.4s;
 }
 
 .progress{
@@ -176,52 +147,288 @@ p.copyright {
 	height:10px;
 }
 
-
-.video-section .pattern-overlay {
-background-color: rgba(71, 71, 71, 0.59);
-padding: 110px 0 32px;
-min-height: 100%; 
-/* Incase of overlay problems just increase the min-height*/
-}
-.video-section h1, .video-section h3{
-text-align:center;
-color:#fff;
-}
-.video-section h1{
-font-size:110px;
-font-family: 'Buenard', serif;
-font-weight:bold;
-text-transform: uppercase;
-margin: 40px auto 0px;
-text-shadow: 1px 1px 1px #000;
--webkit-text-shadow: 1px 1px 1px #000;
--moz-text-shadow: 1px 1px 1px #000;
-}
-.video-section h3{
-font-size: 25px;
-font-weight:lighter;
-margin: 0px auto 15px;
-}
-.video-section .buttonBar{display:none;}
-.player {font-size: 1px;}
-
-
-.popover{
-	width:300px;
-}
-
 .parallax{
     background: url(../image/car.jpg);
     width:100%;
     min-height:500px;
-    height:0 auto;
+    height:auto;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align:center;
  }
  
-section{
+#gallery{
+}
+.view{
+  background: #fff;
+  border:0px;
+  border-radius: 15px 50px 30px;
+  padding:0;
+  margin:0;
+}
+.view-wrap{
+  display:inline-block;
+  width:25%;
+  height:40vh;
+  padding-left:1%;
+  padding-top:2%;
+  margin:0;
+}
+.no-flick{
 	overflow:hidden;
-	background-color:#e2e1e0;
+}
+.nav > li:after{
+	display:block;
+	content: '';
+	border-bottom:solid 5px;
+    border-color: silver;
+    -webkit-transform:scaleX(0);
+ 	transform: scaleX(0);
+	-webkit-transition: -webkit-transform 0.4s ease-in;
+	transition:transform 0.4s ease-in;
+}
+.nav > li:hover:after{
+    -webkit-transform:scaleX(1);
+    transform: scaleX(1);
+}
+.nav > li.active:after{
+    -webkit-transform:scaleX(1);
+    transform: scaleX(1);
+    border-color: gold;
+}
+.contact{
+	position: relative;
+	top:25vh;
+    color: white;
+	background-color: transparent;/*#4CAF50; /* Green */
+	border-radius:20px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    text-shadow: 3px 3px 0px #000;
+    line-height: 2;
+	-webkit-transition: all 0.3s;
+	-khtml-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+    transition: all 0.8s;
+}
+
+.contact:hover{
+    color: white;
+	text-decoration:none;
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+	transform: rotate(360deg);
+    transition: all 0.8s;
+}
+
+.contact:active,.contact:visited,.contact:focus{
+    color: white;
+	text-decoration:none;
+}
+
+.contact > span{    
+	display:none;
+}
+
+.contact:hover > span{    
+	display:inline-block;
+}
+
+.contact:after {
+    content: "";
+    background: #000;
+    position: absolute;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    width:0%;
+    Height:0%;
+    opacity: 0.3;
+    transition: all 0.3s
+}
+.contact:hover:after {
+    
+    width:100%;
+    Height:200%;
+    top:-50%;
+    left:0%;
+    opacity: 0.3;
+    transition: 0.3s
+}
+.servicelist{
+	padding-left:5vw;
+	text-align:left;
+	font-size:1.3em;
+	list-style-type: circle;
+}
+
+/*ipadpro*/
+@media  (min-width: 1024px) and (max-width : 1310px) {
+	.intro-header{
+    	background: url(../image-small/notebook2.jpg) no-repeat cover;
+		min-height:700px;
+	}
+    .intro-message > h1 {
+        font-size: 3em;
+        line-height:2;
+    }
+    .intro-message{
+        padding-top:150px;
+    }
+	.view{
+  		box-shadow:-3px 3px 1.5px silver;
+	}
+	.view-wrap{
+  		display: inline-block;
+  		width:33%;
+		height:250px;
+		padding-left:1.75vw;
+		padding-top:25px;
+		margin:0;
+	}
+	.contact{
+        font-size: 3em;
+        top:200px;
+	}
+	.about-content{
+	padding-left: 6em;
+	padding-right:6em;
+	}
+}
+@media  (min-width: 768px) and (max-width : 1023px) {
+	.intro-header{
+    	background: url(../image-small/notebook2.jpg) no-repeat cover;
+		min-height:700px;
+	}
+    .intro-message > h1 {
+        font-size: 3em;
+        line-height:2;
+    }
+    .intro-message{
+        padding-top:150px;
+    }
+	.view{
+  		box-shadow:-3px 3px 1.5px silver;
+	}
+	.view-wrap{
+  		display: inline-block;
+  		width:49.8%;
+		height:250px;
+		padding-left:6vw;
+		padding-top:25px;
+		margin:0;
+	}
+	.contact{
+        font-size: 3em;
+        top:200px;
+	}
+	.about-content{
+	padding-left: 6em;
+	padding-right:6em;
+	}
+}
+@media (min-width: 360px) and (max-width : 767px) {
+	
+	.intro-header{
+    	background: url(../image-small/notebook2.jpg) no-repeat cover;
+		min-height:700px;
+	}
+    .intro-message > h1 {
+        font-size: 1.6em;
+        line-height:3;
+    }
+    .intro-message{
+        padding-top:150px;
+    }
+    .intro-divider{
+    	display:none;
+    }
+	.view{
+  		box-shadow:0 0 0 silver;
+	}
+	.view-wrap{
+  		display: inline-block;
+  		width:100%;
+		height:250px;
+		padding-left:10vw;
+		padding-top:25px;
+	}
+	.parallax{
+    	background: url(../image-small/car.jpg) no-repeat cover;
+	}
+	.contact{
+        font-size: 2em;
+        top:100px;
+	}
+	.about-header > h1{    
+	font-size: 1.5em;    
+	line-height: 1.2;
+	}
+	.about-header > h2{    
+	font-size: 1.2em;    
+	line-height: 1.2;
+	padding-left:1em;
+	padding-right:1em;
+	}
+	.about-content{
+	padding-left: 2em;
+	padding-right:2em;
+	}
+	.about-content > ul{
+    padding: 5%;
+	}
+}
+@media(max-width : 359px) {
+	
+	.intro-header{
+    	background: url(../image-small/notebook2.jpg) no-repeat cover;
+	}
+	.view{
+  		box-shadow:0 0 0 silver;
+	}
+	.view-wrap{
+  		display: inline-block;
+  		width:100%;
+		height:250px;
+		padding-top:25px;
+		padding-left:calc(100% - 300px);
+	}
+	.parallax{
+    	background: url(../image-small/car.jpg) no-repeat cover;
+	}
+	.intro-message > h1 {
+        font-size: 1.4em;
+        line-height:3;
+    }
+	.contact{
+        font-size: 2em;
+        top:100px;
+	}
+	.about-header > h1{    
+	font-size: 1.5em;    
+	line-height: 1.2;
+	}
+	.about-header > h2{    
+	font-size: 1.2em;    
+	line-height: 1.2;
+	padding-left:1em;
+	padding-right:1em;
+	}
+	.about-content{
+	padding-left: 2em;
+	padding-right:2em;
+	}
+	.about-content > ul{
+    padding: 5%;
+	}
 }

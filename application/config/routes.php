@@ -37,6 +37,13 @@
 | in the URL cannot be matched to a valid route.
 |
 */
+$route['admin'] = 'form/read';
+$route['pages/(:any)'] = 'pages/index';
+/*$route['email/(:any)'] = 'emailcontroller/$1';
+$route['email'] = 'emailcontroller';*/
+$route['validation/(:any)'] = 'form/$1';
+$route['pages'] = 'pages/index';
+$route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages';
 $route['404_override'] = '';
 
