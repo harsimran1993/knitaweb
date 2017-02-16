@@ -23,7 +23,11 @@ class Form extends CI_Controller {
 		$this->form_validation->set_rules('message', 'String', 'trim|required');
 			
 		if ($this->form_validation->run() == FALSE) {
-			echo validation_errors();
+			$data["errors"] = validation_errors();
+			$data['title'] = "formfailure";
+			$this->load->view('templates/header', $data);
+			$this->load->view("pages/formfailure",$data);
+			$this->load->view('templates/footer');
 		}
 		else {
 			$data = array(
